@@ -35,6 +35,11 @@ In your browser, head to `http://localhost:9393/hello/danny`. Now go to `http://
 + The key is determined by the symbol (for example `:name`) that you add to your route. 
 + The associated value will be the content in the url provided by the user.
 + Use the data provided in the same way you would a form - by accessing the key value pair in the `params` hash.
++ You can receive multiple pieces of data through a dynamic route by separating the content with a forward slash. For example, `get '/addnumbers/:number1/:number2` would give you a `params` hash with two key-value pairs (number1 and number2).
 
-## Create your Own Dynamic Route
+## Create your Own Dynamic Routes
 
+Using the example dynamic route as a template, create the following two routes:
+
++ A dynamic route  `get '/goodbye/:name` that returns a string "Goodbye (person's name)!".
++ A dynamic route starting with `/multiply` that accepts two params (num1 and num2) and returns the product of the two numbers.
