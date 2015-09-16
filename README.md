@@ -24,7 +24,9 @@ In App.rb, we have two routes:
 
 ## Dynamic Routes
 
-In your browser, head to `http://localhost:9393/hello/danny`. Now go to `http://localhost:9393/hello/victoria` and `http://localhost:9393/hello/lyel`. Notice how the content on the page changes depending on what we type as the URL in the browser. This is the beauty of dynamic routing - it allows us to take input straight from the url, instead of through a form. In doing so, we can modify the content of a view at the moment the get request is received by the controller.
+In your browser, head to `http://localhost:9393/hello/danny`. Now go to `http://localhost:9393/hello/victoria` and `http://localhost:9393/hello/lyel`. Notice how the content on the page changes depending on what we type as the URL in the browser. This is the beauty of dynamic routing - it allows us to take input straight from the url, instead of through a form. In doing so, we can modify the content of a view at the moment the `get` request is received by the controller.
+
+### How Dynamic Routes Work:
 
 + Dynamic routes will create a key-value pair in the `params` hash. 
 + The key is determined by the symbol (for example `:name`) that you add to your route. 
@@ -34,7 +36,7 @@ In your browser, head to `http://localhost:9393/hello/danny`. Now go to `http://
 
 ## Create your Own Dynamic Routes
 
-Using the example dynamic route as a template, create the following two routes:
+Using the example dynamic route that we included in the codealong as a template, create the following two routes:
 
 + A dynamic route  `get '/goodbye/:name` that returns a string "Goodbye (person's name)!".
 + A dynamic route starting with `/multiply` that accepts two params (num1 and num2) and returns the product of the two numbers.
