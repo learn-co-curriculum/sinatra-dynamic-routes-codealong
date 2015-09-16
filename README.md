@@ -17,9 +17,9 @@ To code along, fork and clone this lab. Run `bundle install` to make sure all of
 
 In App.rb, we have two routes:
 
-+ `get '/hello' do ` which returns the string "hello world" in the browser when we go to the url. This is an example of static routing, which we've seen.
++ `get '/hello'` which returns the string "hello world" in the browser when we go to the url. This is an example of static routing, which we've seen.
 
-+ `get '/hello/:name' do` uses dynamic routing - take a look at the difference between the two routes.
++ `get '/hello/:name'` uses dynamic routing - take a look at the difference between the two routes.
 
 
 ## Dynamic Routes
