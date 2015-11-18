@@ -9,7 +9,7 @@ describe 'APP' do
 
     it 'displays goodbye and a name' do 
       get '/goodbye/danny'
-      expect(last_response.body).to include("goodbye danny")
+      expect(last_response.body).to include("Goodbye danny")
     end
   end
 

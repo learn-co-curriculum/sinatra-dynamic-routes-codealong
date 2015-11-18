@@ -92,6 +92,6 @@ You can receive multiple pieces of data through a dynamic route by separating th
 
 Using the example dynamic route that we included in the code-along as a template, create the following two routes:
 
-+ A dynamic route  `get '/goodbye/:name` that returns a string "Goodbye (person's name)!".
++ A dynamic route  `get '/goodbye/:name` that returns a string "Goodbye (person's name)".
 
 + A dynamic route starting with `/multiply` that accepts two params (num1 and num2) and returns the product of the two numbers.
