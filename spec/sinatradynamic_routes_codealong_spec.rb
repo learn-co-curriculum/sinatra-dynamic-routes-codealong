@@ -21,7 +21,7 @@ describe 'APP' do
 
     it 'displays goodbye and a name' do 
       get '/multiply/5/5'
-      expect(last_response.body).to include("5 * 5")
+      expect(last_response.body).to include("25")
     end
   end
 
