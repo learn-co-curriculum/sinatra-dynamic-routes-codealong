@@ -11,7 +11,7 @@ How does AirBnB create a separate url for every property it hosts on its site? W
 
 ## Setup
 
-To code along, fork and clone this lab. Run `bundle install` to make sure all of your dependencies are installed. Run `shotgun` to make sure that your application can run. There are tests, so make sure you're running `rspec` periodically to make sure you code is behaving as expected.
+To code along, fork and clone this lab. Run `bundle install` to make sure all of your dependencies are installed. Run `shotgun` to make sure that your application can run. There are tests, so make sure you're running `learn` periodically to make sure you code is behaving as expected.
 
 ### Starter Code
 
