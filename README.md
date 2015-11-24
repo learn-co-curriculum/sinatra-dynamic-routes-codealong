@@ -21,6 +21,8 @@ The first route is familiar looking to us. It returns the string "hello world" i
 
 But `get '/hello/:name'` is very different. What's with that `:` in front of `name`? This is an example of a `dynamic route`.
 
+Eventually we are going to need to capture data from the user. We need to know who they want to say hello to. There are a few ways to get this information, the easiest is built right into the URL. They are already typing that URL into the box at the top of their browser, let's use it to get a bit more information.
+
 
 ## Dynamic Routes
 
@@ -60,7 +62,7 @@ Let's run through this specific scenario. The HTTP request verb, `GET` matches t
 
 ### URL Params
 
-A URl parameter is a variable whose values are set dynamically in a page's URL, and can be accessed by its template (your view) and its data sources (your models). It's a very similar concept to a dynamic url.
+A URl parameter is a variable whose values are set dynamically in a page's URL, and can be accessed by its corresponding controller action. It's a very similar concept to a dynamic url.
 
 The next thing that happens is that the `all_the_medicines` array is queried for a medicine object that has the `id` of 1. It seems to match this entry: `#<Medicine:0x007fb739b1af88 @id=1, @name="penicillin" @group="antibiotic">,`. The attributes from this object are assigned to the variable `@medicine`.
 
