@@ -97,3 +97,5 @@ Using the example dynamic route that we included in the code-along as a template
 + A dynamic route  `get '/goodbye/:name` that returns a string "Goodbye (person's name)".
 
 + A dynamic route starting with `/multiply` that accepts two params (num1 and num2) and returns the product of the two numbers.
+
+<a href='https://learn.co/lessons/sinatra-dynamic-routes-codealong' data-visibility='hidden'>View this lesson on Learn.co</a>
