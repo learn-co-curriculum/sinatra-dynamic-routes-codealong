@@ -1,15 +1,19 @@
 # Dynamic Routes in Sinatra
 
 ## Overview
-How does AirBnB create a separate url for every property it hosts on its site? Would it make sense to hard-code hundreds of thousands of routes (`get '/property1'`, `get '/property2'`,`get '/property2356'`) in the controller to display each rental property? The controller would get messy and long very quickly. Instead, AirBnB (and Twitter, and Facebook, etc) use *dynamic routes* - routes that are created based on attributes within the url of the request. In this code-along we'll learn why dynamic routes are powerful and how to integrate them in to a Sinatra project.
+
+In this code-along lesson, we'll learn why dynamic routes are powerful and how to integrate them in to a Sinatra project.
 
 ## Objectives
 
-+ Explain the purpose of dynamic routes.
-+ Create dynamic routes in the controller.
-+ Show the relationship between dynamic routes and the browser URL.
+1. Explain the purpose of dynamic routes
+2. Create dynamic routes in the controller
+3. Use URL params to help get the text from the URL into the views
+4. Show the relationship between dynamic routes and the browser URL
 
-## Setup
+## Why Dynamic Routes Matter
+
+How does AirBnB create a separate url for every property it hosts on its site? Would it make sense to hard-code hundreds of thousands of routes (`get '/property1'`, `get '/property2'`,`get '/property2356'`) in the controller to display each rental property? The controller would get messy and long very quickly. Instead, AirBnB (and Twitter, and Facebook, etc) use *dynamic routes* - routes that are created based on attributes within the url of the request. In this code-along we'll learn why dynamic routes are powerful and how to integrate them in to a Sinatra project.
 
 To code along, fork and clone this lab. Run `bundle install` to make sure all of your dependencies are installed. Run `shotgun` to make sure that your application can run. There are tests, so make sure you're running `learn` periodically to make sure you code is behaving as expected.
 
@@ -21,7 +25,7 @@ The first route is familiar looking to us. It returns the string "hello world" i
 
 But `get '/hello/:name'` is very different. What's with that `:` in front of `name`? This is an example of a `dynamic route`.
 
-Eventually we are going to need to capture data from the user. We need to know who they want to say hello to. There are a few ways to get this information, the easiest is built right into the URL. They are already typing that URL into the box at the top of their browser, let's use it to get a bit more information.
+Eventually we are going to need to capture data from the user. We need to know who they want to say hello to. There are a few ways to get this information, and the easiest is built right into the URL. They are already typing that URL into the box at the top of their browser, so let's use it to get a bit more information.
 
 
 ## Dynamic Routes
@@ -30,7 +34,7 @@ In your browser, head to `http://localhost:9393/hello/danny`. Now go to `http://
 
 ### How Dynamic Routes Work:
 
-It's important to note that in Sinatra, a route is simply a HTTP method/verb that is paired with a URL-matching pattern. When your Sinatra application receives a request, it will match that route to a specific controller action that matches that URL pattern.
+It's important to note that in Sinatra a route is simply an HTTP method/verb that is paired with a URL-matching pattern. When your Sinatra application receives a request, it will match that route to a specific controller action that matches that URL pattern.
 
 The best way to explain routes is by going through an example. Our application is a medicine application that has an array containing three instances of a Medicine class.
 
@@ -68,12 +72,9 @@ The next thing that happens is that the `all_the_medicines` array is queried for
 
 Finally, the `@medicine` object is rendered via the `show.html.erb` template inside of the `views/medicines` directory.
 
+Going back to our initial example, if you played around enough with the examples above, you'll notice that whatever name you typed in the url also appeared the browser, saying hello to that person. How were we able to get the text from the URL to the views?
 
-If you played around enough with the examples above, you'll notice that whatever name you typed in the url also appeared the browser, saying hello to that person. How were we able to get the text from the URL to the views?
-
-### URL Params
-
-URL params help us get the text from the URL into the views. That `:name` in the route name is just a symbol that will be filled in with text later. The data is passed from the URL to the controller action through an automatically generated hash called `params`. Don't worry too much how the hash is created, just know that inside your controller action, you automatically have access to this hash through the variable `params`. 
+URL params help us get the text from the URL into the views. That `:name` in the route name is just a symbol that will be filled in with text later. The data is passed from the URL to the controller action through an automatically generated hash called `params`. Don't worry too much how the hash is created. Just know that inside your controller action, you automatically have access to this hash through the variable `params`. 
 
 To continue the medicine example, the hash looks something like this:
 
