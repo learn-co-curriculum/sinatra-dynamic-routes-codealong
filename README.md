@@ -72,7 +72,7 @@ The next thing that happens is that the `all_the_medicines` array is queried for
 
 Finally, the `@medicine` object is rendered via the `show.html.erb` template inside of the `views/medicines` directory.
 
-Going back to our initial example, if you played around enough with the examples above, you'll notice that whatever name you typed in the url also appeared the browser, saying hello to that person. How were we able to get the text from the URL to the views?
+Going back to our initial example, if you played around enough with the examples above, you'll notice that whatever name you typed in the url also appeared in the browser, saying hello to that person. How were we able to get the text from the URL to the views?
 
 URL params help us get the text from the URL into the views. That `:name` in the route name is just a symbol that will be filled in with text later. The data is passed from the URL to the controller action through an automatically generated hash called `params`. Don't worry too much how the hash is created. Just know that inside your controller action, you automatically have access to this hash through the variable `params`. 
 
