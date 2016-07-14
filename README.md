@@ -1,5 +1,4 @@
 # Dynamic Routes in Sinatra
-
 ## Overview
 
 In this code-along lesson, we'll learn why dynamic routes are powerful and how to integrate them in to a Sinatra project.
@@ -100,3 +99,5 @@ Using the example dynamic route that we included in the code-along as a template
 + A dynamic route starting with `/multiply` that accepts two params (num1 and num2) and returns the product of the two numbers.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-dynamic-routes-codealong' title='Dynamic Routes in Sinatra'>Dynamic Routes in Sinatra</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-dynamic-routes-codealong'>Dynamic Routes</a> on Learn.co and start learning to code for free.</p>
