@@ -1,4 +1,4 @@
-require 'pry'
+require 'spec_helper'
 describe 'APP' do 
 
   describe 'GET /goodbye/:name' do
