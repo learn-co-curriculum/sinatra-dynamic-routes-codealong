@@ -1,8 +1,5 @@
 # Dynamic Routes in Sinatra
 
-
-
-
 ## Overview
 
 In this code-along lesson, we'll learn why dynamic routes are powerful and how to integrate them into a Sinatra project.
@@ -44,9 +41,9 @@ The best way to explain routes is by going through an example. Our application i
 Here's our array:
 
 ```ruby
-all_the_medicines = [ 
-  #<Medicine:0x007fb739b1af88 @id=1, @name="penicillin" @group="antibiotic">, 
-  #<Medicine:0x007fb739b1af88 @id=2, @name="advil" @group="anti-inflammatory">, 
+all_the_medicines = [
+  #<Medicine:0x007fb739b1af88 @id=1, @name="penicillin" @group="antibiotic">,
+  #<Medicine:0x007fb739b1af88 @id=2, @name="advil" @group="anti-inflammatory">,
   #<Medicine:0x007fb739b1af88 @id=3, @name="benadryl" @group="anti-histamine">
 ]
 ```
@@ -65,7 +62,7 @@ get '/medicines/:id' do
 end
 ```
 
-Let's run through this specific scenario. The HTTP request verb, `GET` matches the `get` method in our controller. The `/medicines` path in the HTTP request matches the `/medicines` path in our controller method. Finally, the `1`, which is an `id` parameter that's being passed into the path, matches the controller's expectation for an `id` parameter to be passed in place of `:id`. 
+Let's run through this specific scenario. The HTTP request verb, `GET` matches the `get` method in our controller. The `/medicines` path in the HTTP request matches the `/medicines` path in our controller method. Finally, the `1`, which is an `id` parameter that's being passed into the path, matches the controller's expectation for an `id` parameter to be passed in place of `:id`.
 
 ### URL Params
 
@@ -77,7 +74,7 @@ Finally, the `@medicine` object is rendered via the `show.html.erb` template ins
 
 Going back to our initial example, if you played around enough with the examples above, you'll notice that whatever name you typed in the url also appeared in the browser, saying hello to that person. How were we able to get the text from the URL to the views?
 
-URL params help us get the text from the URL into the views. That `:name` in the route name is just a symbol that will be filled in with text later. The data is passed from the URL to the controller action through an automatically generated hash called `params`. Don't worry too much how the hash is created. Just know that inside your controller action, you automatically have access to this hash through the variable `params`. 
+URL params help us get the text from the URL into the views. That `:name` in the route name is just a symbol that will be filled in with text later. The data is passed from the URL to the controller action through an automatically generated hash called `params`. Don't worry too much how the hash is created. Just know that inside your controller action, you automatically have access to this hash through the variable `params`.
 
 To continue the medicine example, the hash looks something like this:
 
@@ -98,10 +95,8 @@ You can receive multiple pieces of data through a dynamic route by separating th
 
 Using the example dynamic route that we included in the code-along as a template, create the following two routes:
 
-+ A dynamic route  `get '/goodbye/:name` that returns a string "Goodbye (person's name)".
++ `get '/goodbye/:name`, a dynamic route that returns `"Goodbye, (person's name)."`, a string. For example, navigating to `localhost:9393/goodbye/jerome` should display `Goodbye, jerome.`
 
 + A dynamic route starting with `/multiply` that accepts two params (num1 and num2) and returns the product of the two numbers.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-dynamic-routes-codealong' title='Dynamic Routes in Sinatra'>Dynamic Routes in Sinatra</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-dynamic-routes-codealong'>Dynamic Routes</a> on Learn.co and start learning to code for free.</p>
