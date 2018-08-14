@@ -83,7 +83,7 @@ params = {
   :id => 1
 }
 ```
-The key of the hash is determined by the symbol in the url (`:id`), and the associated value will be the content in the url provided by the user (`1`). Once inside the controller action, we can access the value from the params hash, just like we would any other hash
+The key of the hash is determined by the symbol in the url (`:id`), and the associated value will be the content in the url provided by the user (`1`). Once inside the controller action, we can access the value from the params hash, just like we would any other hash.
 
 ```ruby
 params[:id]
