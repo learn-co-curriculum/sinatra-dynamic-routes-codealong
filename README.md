@@ -57,7 +57,7 @@ The first thing Sinatra does is try to match the request to a specific controlle
 get '/medicines/:id' do
   @medicine = all_the_medicines.select do |medicine|
     medicine.id == params[:id]
-  end.first
+  end.find
   erb :'/medicines/show.html'
 end
 ```
