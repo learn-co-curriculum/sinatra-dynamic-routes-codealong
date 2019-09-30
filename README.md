@@ -131,9 +131,11 @@ To continue the medicine example, the hash looks something like this:
 
 ```ruby
 params = {
-  :id => 1
+  :id => "1" //This is a String and NOT an Integer
 }
 ```
+
+**Note:** Values in params always come in as strings, and your return value for the route should also be a string (use `.to_i` and `.to_s`).
 
 The key of the hash is determined by the symbol in the url (`:id`), and the
 associated value will be the content in the url provided by the user (`1`). Once
