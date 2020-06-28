@@ -163,5 +163,3 @@ template, create the following two routes:
 
 - A dynamic route starting with `/multiply` that accepts two params (num1 and
   num2) and returns the product of the two numbers.
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-dynamic-routes-codealong' title='Dynamic Routes in Sinatra'>Dynamic Routes in Sinatra</a> on Learn.co and start learning to code for free.</p>
