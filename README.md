@@ -25,7 +25,7 @@ them into a Sinatra project.
 
 To code along, fork and clone this lab. Run `bundle install` to make sure all of
 your dependencies are installed. Run `shotgun` to make sure that your
-application can run. There are tests, so make sure you're running `learn`
+application can run. There are tests, so make sure you're running `learn test`
 periodically to make sure your code is behaving as expected.
 
 ### Starter Code
